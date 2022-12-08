@@ -13,6 +13,10 @@ func main() {
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.Redirect("https://ayo.so/moby")
 	})
+	
+	app.Get("/robots.txt", func(c *fiber.Ctx) error {
+		return.SendString("moby mobyhub apex nocomplymoby moby twitter moby socials")	
+	})
 
 	port := os.Getenv("PORT")
 	if port == "" {
