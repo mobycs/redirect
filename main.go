@@ -15,7 +15,7 @@ func main() {
 	})
 	
 	app.Get("/robots.txt", func(c *fiber.Ctx) error {
-		return.SendString("moby mobyhub apex nocomplymoby moby twitter moby socials")	
+		return c.SendString("moby mobyhub apex nocomplymoby moby twitter moby socials")	
 	})
 
 	port := os.Getenv("PORT")
